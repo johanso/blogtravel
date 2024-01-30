@@ -1,0 +1,124 @@
+.navbar {
+  padding: 1rem 0;
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  transition: all .2s linear;
+  &__container {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  &__ul {
+    list-style: none;
+    margin-left: auto;
+    align-items: center;
+    margin-bottom: 0;
+    gap: 1.5rem;
+    display: none;
+    @media (min-width: 768px) {
+      display: flex;
+    }
+  }
+  &__ul_mobile {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    background-color: var(--background-color);
+    gap: .75rem;
+    top: 3.5rem;
+    right: 1rem;
+    padding: 1rem;
+    border-radius: .5rem;
+    box-shadow: var(--shadow);
+    font-size: .9rem;
+    z-index: 10;
+    @media (min-width: 768px) {
+      display: none;
+    }
+  }
+  &__li {
+    a {
+      transition: all .2s;
+      color: var(--text-color);
+      @media (min-width: 768px) {
+        color: var(--text-color-inverse);
+      }
+      &:focus, &:hover, &:active {
+        text-decoration: none;
+        color: var(--text-color);
+        @media (min-width: 768px) {
+          color: var(--text-color-inverse);
+        }
+      }
+    }
+  }
+  &__button {
+    @media (min-width: 768px) {
+      margin-left: 1.5rem;
+    }
+  }
+  &__logo {
+    display: flex;
+    align-items: center;
+    img {
+      height: 2.5rem;
+      width: auto;
+      filter: invert(1);
+      @media (min-width: 1200px) {
+        height: 3rem;
+      }
+    }
+    a {
+      display: flex;
+      align-items: center;
+      text-decoration: none !important;
+    }
+    * {
+      color: var(--text-color-inverse);
+    }
+  }
+  &__logo_text {
+    margin-left: 0.5rem;
+    font: 300 1.1rem/1.2 var(--Cairo);
+    letter-spacing: 0;
+    @media (min-width: 1200px) {
+      font-size: 1.5rem;
+    }
+    span {
+      font: 700 1.4rem/1.2 var(--Cairo);
+      letter-spacing: 1px;
+      @media (min-width: 1200px) {
+        font-size: 1.8rem;
+      }
+    }
+  }
+  &__menu_icon{
+    cursor: pointer;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    @media (min-width: 768px) {
+      display: none;
+    }
+  }
+  &[class*="down"] {
+    top: -63px;
+  }
+  &[class*="up"] {
+    background-color: var(--background-color);
+    top: 0;
+    img[alt="logo"] {
+      filter: invert(0);
+    }
+    [class*="logo_text"] {
+      color: var(--text-color);
+      span {
+        color: var(--text-color);
+      }
+    }
+    a {
+      color: var(--text-color);
+    }
+  }
+}

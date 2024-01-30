@@ -1,0 +1,38 @@
+.platforms {
+  display: flex;
+  justify-content: center;
+  margin: 2rem auto;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  @media (min-width: 992px) {
+    max-width: 992px;
+  }
+  &__logos {
+    display: flex;
+    gap: .5rem;
+    margin: 0;
+    justify-content: center;
+    @media (min-width: 992px) {
+      animation: none;
+      gap: 2rem;
+      justify-content: center;
+      margin: auto;
+    }
+  }
+  &__logo {
+    position: relative;
+    width: auto;
+    left: 0;
+    text-align: left;
+    font-size: 0;
+    img {
+      width: 4.5rem;
+      @media (min-width: 992px) {
+        width: 8rem;
+      }
+    }
+  }
+}

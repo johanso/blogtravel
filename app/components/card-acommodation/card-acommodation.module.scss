@@ -1,0 +1,90 @@
+.cardAcommodation {
+  width: 24rem;
+  scroll-snap-align: center;
+  &__header {
+    border-radius: 0.75rem;
+    overflow: hidden;
+    margin-bottom: 0.75rem;
+    position: relative;
+  }
+  &__title {
+    font-size: 1.35rem;
+    margin-bottom: .25rem;
+  }
+  &__reputation {
+    font-size: 0.875rem;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.75rem;
+    gap: 1rem;
+    span {
+      display: flex;
+      align-items: center;
+    }
+    svg {
+      margin-right: 0.5rem;
+    }
+  }
+  &__stars {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .25rem;
+    position: absolute;
+    right: 0.75rem;
+    top: 0.75rem;
+    background: hsla(0deg, 0%, 100%, .1);
+    padding: 0.25rem 0.75rem;
+    border-radius: 25rem;
+  }
+  &__amenities {
+    border-top: 1px solid var(--border-color);
+  }
+  &__amenities_list {
+    display: grid;
+    list-style: none;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.25rem;
+    padding: 0.5rem 0 0;
+  }
+  &__amenities_item {
+    font-size: 0.875rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  &__qualification {
+    display: flex;
+    gap: 0.5rem;
+    border-radius: 0.5rem;
+    margin: 0.5rem 0;
+    [class*="box"] {
+      font: 500 1.2rem/1.5 var(--Cairo);
+      color: var(--text-color-inverse);
+      background: var(--alternative-color);
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: 0.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+  }
+  &__qualification_text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    [class*="text-bottom"] {
+      font-size: .875rem;
+    }
+    [class*="text-top"] {
+      font: 700 1rem/1.1 var(--Cairo);
+    }
+  }
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    margin: 1.5rem 0 0;
+  }
+}

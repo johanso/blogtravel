@@ -1,7 +1,10 @@
 import { client } from "@/sanity/lib/client";
-import Header from "../components/Header";
 import { Post } from "../utils/interface";
-import PostComponent from "../components/PostComponent";
+import Hero from "../components/hero";
+import FeaturedAcommodations from "../components/featured-accommodations";
+import Features from "../components/features";
+import DownloadApp from "../components/download-app";
+import Footer from "../components/footer";
 
 async function getPosts() {
   const query = `
@@ -28,12 +31,13 @@ export default async function Home() {
   console.log(posts, "posts");
 
   return (
-    <div>
-      <Header title="Articles" tags />
-      <div>
-        {posts?.length > 0 &&
-          posts?.map((post) => <PostComponent key={post?._id} post={post} />)}
-      </div>
-    </div>
+    <>
+      <Hero />
+      <FeaturedAcommodations />
+      {/* <PlacesCard /> */}
+      <Features />
+      <DownloadApp />
+      <Footer />
+    </>
   );
 }

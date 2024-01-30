@@ -1,4 +1,3 @@
-import Header from "@/app/components/Header";
 import { Post } from "@/app/utils/interface";
 import { client } from "@/sanity/lib/client";
 import { urlForImage } from "@/sanity/lib/image";
@@ -51,7 +50,6 @@ const page = async ({ params }: Params) => {
 
   return (
     <div>
-      <Header title={post?.title} />
       <div className="text-center">
         <span className={`${dateFont?.className} text-purple-500`}>
           {new Date(post?.publishedAt).toDateString()}
