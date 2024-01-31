@@ -5,6 +5,7 @@ import FeaturedAcommodations from "../components/featured-accommodations";
 import Features from "../components/features";
 import DownloadApp from "../components/download-app";
 import Footer from "../components/footer";
+import PlacesCard from "../components/places-home";
 
 async function getPosts() {
   const query = `
@@ -33,8 +34,8 @@ export default async function Home() {
   return (
     <>
       <Hero />
+      <PlacesCard />
       <FeaturedAcommodations />
-      {/* <PlacesCard /> */}
       <Features />
       <DownloadApp />
       <Footer />

@@ -42,6 +42,16 @@
       background-color: var(--text-color);
     }
   }
+  &--light {
+    background-color: var(--text-color-inverse);
+    color: var(--text-color);
+    &:hover, &:focus, &:active {
+      opacity: .8;
+    }
+    img {
+      filter: invert(1);
+    }
+  }
   &[data-size="large"] {
     height: 4rem;
     font-size: 1.1rem;

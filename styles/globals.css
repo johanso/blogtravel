@@ -45,6 +45,10 @@ h1, h2, h3 {
   font-family: var(--Cairo);
 }
 
+.container {
+  max-width: 1200px;
+}
+
 .section-title {
   font: 400 1.45rem/1.5 var(--Cairo);
   margin-bottom: 2rem; 

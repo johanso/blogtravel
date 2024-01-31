@@ -3,13 +3,18 @@ import useCarrousel from '@/hooks/useCarrousel';
 import CardAcommodation from '../card-acommodation'
 import styles from './featured-accommodations.module.scss'
 import { IconArrowLeft, IconArrowRight } from '../icons';
+import { useRef } from 'react';
 
 const FeaturedAcommodations = () => {
+
+  // obtener coordenadas de elemento
+  const container = useRef<HTMLDivElement>(null);
 
   const { configCarrousel, containerCarrousel, onHandleRightOrLeftScroll } = useCarrousel('carrusel-acommodation');
 
   return (
     <section className={styles.featuredAcommodations}>
+
       <div className={`${styles.featuredAcommodations__header} container`}>
         <h2 className="section-title"><strong>Explora </strong> los Mejores Hospedajes</h2>
         <div className='featuredAcommodations-buttons'>
